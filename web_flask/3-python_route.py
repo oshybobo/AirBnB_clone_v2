@@ -26,7 +26,7 @@ def c_route(text):
     Display 'C ', followed by the value of the text variable,\
     replacing underscores with spaces.
     """
-    return "C {}".format(escape(text).replace('_',' '))
+    return "C {}".format(escape(text).replace('_', ' '))
 
 
 @app.route(
