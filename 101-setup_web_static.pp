@@ -1,4 +1,4 @@
-# 101-setup_web_static.pp
+# Puppet for setup
 
 $nginx_conf = "server {
     listen 80 default_server;
@@ -11,7 +11,7 @@ $nginx_conf = "server {
         index index.html index.htm;
     }
     location /redirect_me {
-        return 301 http://code021.tree;
+        return 301 http://linktr.ee/firdaus_h_salim/;
     }
     error_page 404 /404.html;
     location /404 {
@@ -26,7 +26,7 @@ package { 'nginx':
 }
 
 -> file { '/data':
-  ensure => 'directory'
+  ensure  => 'directory'
 }
 
 -> file { '/data/web_static':
@@ -69,7 +69,7 @@ file { '/var/www':
 
 -> file { '/var/www/html/index.html':
   ensure  => 'present',
-  content => "This is my first upload in /var/www/index.html***\n"
+  content => "This is my first upload  in /var/www/index.html***\n"
 }
 
 -> file { '/var/www/html/404.html':
